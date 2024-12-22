@@ -10,24 +10,17 @@
     }
     
     .header{
-        height: 25%; 
-        width: 100%;
-        background-color: rgba(170, 151, 74, 1); 
-        display: flex; 
-        justify-content: space-between; 
-        flex-direction: column;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
+        display: none;
+        height: 0%; 
+        width: 0%;
     }
     
     #div_menu{
+        display: none;
         justify-content: space-between;
         flex-direction: row;
         align-items: center;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
-    
-    ol{
-        display: none;
-    }
+        transition: 0.8s ease-in-out;
 
         li{
             font-size: 20px;
@@ -35,32 +28,31 @@
         }
     
     }
+/* 
+    #ol_list{
+        display: none;
+    } */
+
 
     
-    
     #div_bar{
-        border: 1px solid black;
-        transition: 0.8s ease-in-out; /* Плавное изменение ширины */
-        cursor: pointer;
-        align-content: center;
-        height: 10vw;
+        display: none;
     }
     
     #arrow{
         display: flex;
-        align-self: center;
+        margin-top: 1rem;
     }
     
     
     #logoStyle{
-        width: 10rem; 
-        padding-top: 8rem; 
+        display: none;
     }
+
     
     .header{
         ul{
             padding-top: 7rem;
-            padding-left: 2rem;
         }
     
         li{
@@ -80,9 +72,20 @@
         transition: 0.8s;
     
         img{
-            height: 95%;
-            max-width: 100%;
+            height: 23rem;
+            transform: rotate(90deg);
+            position: relative;
         }
+
+        p{
+            font-family: 'EB Garamond';
+            font-weight: 500;
+            font-size: 5vw;
+            z-index: 10;
+            position: absolute;
+            color: rgba(246, 255, 0, 1);
+        }
+
     }
     
     #cultureBlockMainPage{
@@ -96,8 +99,19 @@
         transition: 0.8s;
     
         img{
-            height: 95%;
-            max-width: 100%;
+            height: 23rem;
+            transform: rotate(90deg);
+            position: relative;
+        }
+
+        p{
+            font-family: 'EB Garamond';
+            font-weight: 500;
+            font-size: 5vw;
+            z-index: 10;
+            position: absolute;
+            color: rgba(246, 255, 0, 1);
+            margin-left: -0.7rem;
         }
     }
     
@@ -113,8 +127,19 @@
         transition: 0.8s;
     
         img{
-            height: 95%;
-            max-width: 100%;
+            height: 23rem;
+            transform: rotate(90deg);
+            position: relative;
+        }
+
+        p{
+            font-family: 'EB Garamond';
+            font-weight: 500;
+            font-size: 5vw;
+            z-index: 10;
+            position: absolute;
+            color: rgba(246, 255, 0, 1);
+            margin-left: -0.7rem;
         }
     }
     
@@ -129,9 +154,68 @@
         transition: 0.8s;
     
         img{
-            height: 95%;
-            max-width: 100%;
+            height: 23rem;
+            transform: rotate(90deg);
+            position: relative;
+        }
+
+        p{
+            font-family: 'EB Garamond';
+            font-weight: 500;
+            font-size: 5vw;
+            z-index: 10;
+            position: absolute;
+            color: rgba(246, 255, 0, 1);
+            margin-left: -0.1rem;
         }
     }
+
+#headerMobile{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(170, 151, 74, 1);
+    font-size: 5vw;
+
+    ul{
+        width: 12rem;
+        margin-left: -5%;
+    }
+}
+
+#logoBox{
+    width: 35%;
+}
+
+
+#ol_list{
+    display: none;
+}
+
+#div_bar_phone{
+    width: 0%;
+    margin-left: 1.5rem;
+    display: flex;
+    justify-content: center;
+}
+
+#arrow_mobile{
+    height: 1rem;
+    transform: rotate(90deg);
+    margin-top: 5rem;
+}
+
+#logoStyle_phone{
+    width: 9.5rem;
+    height: 10rem;
+    padding: 0.5rem 0.5rem;
+}
+
+#list{
+    ul, li, ol {
+        font-size: 16px;
+        list-style: none;
+    }
+}
     
 }

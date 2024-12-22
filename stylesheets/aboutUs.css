@@ -16,7 +16,6 @@
         color: rgba(246, 255, 0, 1);
     }
 
-
 .mainPageBlock{
     display: flex; 
     flex-direction: row; 
@@ -35,6 +34,10 @@
     transition: 0.8s ease-in-out; /* Плавное изменение ширины */
 }
 
+#headerMobile{
+    display: none;
+}
+
 #div_menu{
     display: none;
     justify-content: space-between;
@@ -43,14 +46,16 @@
 }
 
 #div_bar{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     transition: 0.8s ease-in-out; /* Плавное изменение ширины */
     cursor: pointer;
     align-content: center;
+    padding: 0.7rem;
 }
 
 #arrow{
     display: flex;
+    width: 2rem;
 }
 
 
@@ -58,11 +63,13 @@
 #logoStyle{
     width: 100%; 
     padding: 0.5rem; 
+    margin-left: 0.5rem;
+    margin-top: 0.5rem;
 }
 
 .header{
     ul{
-        padding-left: 0.5rem
+        padding-left: 1rem;
     }
 
     li{
@@ -81,9 +88,19 @@
     cursor: pointer;
     transition: 0.8s;
 
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.8vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+    }
+
     img{
         height: 95%;
         max-width: 100%;
+        position: relative;
     }
 }
 
@@ -96,9 +113,20 @@
     cursor: pointer;
     transition: 0.8s;
 
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.8vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+        margin-left: 1.2rem;
+    }
+
     img{
         height: 95%;
         max-width: 100%;
+        position: relative;
     }
 }
 
@@ -112,9 +140,20 @@
     cursor: pointer;
     transition: 0.8s;
 
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.8vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+        margin-left: 0.5rem;
+    }
+
     img{
         height: 95%;
         max-width: 100%;
+        position: relative;
     }
 }
 
@@ -127,9 +166,20 @@
     cursor: pointer;
     transition: 0.8s;
 
+    p{
+        font-family: 'EB Garamond';
+        font-weight: 500;
+        font-size: 1.8vw;
+        z-index: 10;
+        position: absolute;
+        color: rgba(246, 255, 0, 1);
+        margin-left: 1.5rem;
+    }
+
     img{
         height: 95%;
         max-width: 100%;
+        position: relative;
     }
 }
 

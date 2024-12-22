@@ -7,9 +7,8 @@
     <link rel="stylesheet" href="./stylesheets/stylesheet.css">
     <link rel="stylesheet" href="./stylesheets/adaptive.css">
     <title>Document</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Manrope:wght@200..800&family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/css; charset=UTF-8">
+            
 </head>
 <body>
     <div class="mainPageBlock">
@@ -37,24 +36,50 @@
 
             <div id="div_bar">
                 <div>
-                    <img id="arrow" src="./img/arrow.svg">
+                    <img id="arrow" src="./img/arrow.webp">
                 </div>
             </div>
         </div>
 
+        <div id="headerMobile">
+            <div id="logoBox"><img id="logoStyle_phone" src="img/Консерва.webp"></div>
+            <div id="list"> <ul>
+                    <li>О нас</li>
+                    <li>Манифесты
+                    <ol id="ol_list">
+                        <li>i. Дизайн</li>
+                        <li>ii. Культура</li>
+                        <li>iii. Архитектура</li>
+                        <li>iv. Живопись</li>
+                    </ol>
+                    </li>
+                    <li>Стайлгайд</li>
+                    <li>Рефлексия</li><br>
+                    <li>вк / телеграм</li>
+                    </ul>
+            </div>
+            <div id="div_bar_phone"><img id="arrow_mobile" src="./img/arrow.webp"></div>
+        </div>
+
+
+
         <div id="designBlockMainPage">
+            <p>i</p>
             <img src="img/imgDesignMainPage.webp">
         </div>
 
         <div id="cultureBlockMainPage">
+            <p>ii</p>
             <img src="img/imgCultureMainPage.webp">
         </div>
 
         <div id="architectureBlockMainPage">
+            <p>iii</p>
             <img src="img/imgArchitectureMainPage.webp">
         </div>
 
         <div id="artsBlockMainPage">
+            <p>iv</p>
             <img src="img/imgArtsMainPage.webp">
         </div>
         
@@ -69,7 +94,8 @@
 </html>
 
 
-<script>    
+<script>  
+    document.getElementById('div_bar').addEventListener('click', toggleMenu);
     function toggleMenu() {
         const div_bar = document.getElementById('div_bar');
         const arrow = document.getElementById('arrow');
@@ -98,40 +124,60 @@
       
     }
 
-    document.getElementById('div_bar').addEventListener('click', toggleMenu);
-
+    // function adaptiveMenuForMobileJs() {
+    //     const div_bar = document.getElementById('div_bar');
+    //     const arrow = document.getElementById('arrow');
+    //     const div_menu = document.getElementById('div_menu');
+    //     const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
+        
+    //     if (document.documentElement.clientWidth <= 414) {
+    //         if (div_menu.style.display === 'none') {
+    //             // Открываем меню
+    //             div_menu.style.display = 'flex';
+    //             div_bar.classList.add('active');
+    //             otherDivs.forEach(div => div.style.height = '20%');
+    //             div_menu.style.height = '25%';
+    //             arrow.style.transform = 'rotate(-90deg)';
+    //         } 
+            
+    //         else {
+    //             // Закрываем меню
+    //             div_menu.style.display = 'none';
+    //             div_bar.classList.remove('active');
+    //             otherDivs.forEach(div => div.style.height = '25%');
+    //             div_menu.style.height = '0%';
+    //             arrow.style.transform = 'rotate(90deg)';
+    //         }
+    //     }
+    // }
+    // document.getElementById('div_bar').addEventListener('click', adaptiveMenuForMobileJs);
 
     
+    // // window.innerHeight <= 414
 
-    function adaptiveMenuForMobileJs() {
-        const div_bar = document.getElementById('div_bar');
-        const arrow = document.getElementById('arrow');
-        const div_menu = document.getElementById('div_menu');
-        const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
-        
-        if (document.documentElement.clientWidth <= 414) {
-            if (div_menu.style.display === 'none') {
-                // Открываем меню
-                div_menu.style.display = 'flex';
-                div_bar.classList.add('active');
-                otherDivs.forEach(div => div.style.height = '20%');
-                div_menu.style.height = '25%';
-                arrow.style.transform = 'rotate(-90deg)';
-            } 
-            
-            else {
-                // Закрываем меню
-                div_menu.style.display = 'none';
-                div_bar.classList.remove('active');
-                otherDivs.forEach(div => div.style.height = '25%');
-                div_menu.style.height = '0%';
-                arrow.style.transform = 'rotate(90deg)';
-            }
+    document.getElementById('div_bar_phone').addEventListener('click', toggleList);
+
+    function toggleList() {
+    const ol_list = document.getElementById('ol_list');
+    const arrow_mobile = document.getElementById('arrow_mobile');
+    const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
+    const logoStyle_phone = document.getElementById('logoStyle_phone');
+
+    if (document.documentElement.clientWidth <= 414){
+        if (ol_list.style.display === 'none' || ol_list.style.display === '') {
+            ol_list.style.display = 'block'; // Показываем упорядоченный список
+            arrow_mobile.style.transform = 'rotate(90deg)'
+            otherDivs.forEach(div => div.style.height = '18%');
+            logoStyle_phone.style.height = '14.5rem';
+        } else {
+            ol_list.style.display = 'none'; // Скрываем упорядоченный список
+            arrow_mobile.style.transform = 'rotate(-90deg)'
+            otherDivs.forEach(div => div.style.height = '20%');
+            logoStyle_phone.style.height = '10rem';
         }
     }
-    document.getElementById('div_bar').addEventListener('click', adaptiveMenuForMobileJs);
 
-    
-    // window.innerHeight <= 414
+}
+
 </script>
 
