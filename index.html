@@ -13,7 +13,7 @@
 <body>
     <div class="mainPageBlock">
 
-        <div class="header">
+        <div id="header">
 
             <div id="div_menu" style="display: none;" class="hidden">
                 <img id="logoStyle" src="img/Консерва.webp">
@@ -97,6 +97,7 @@
 <script>  
     document.getElementById('div_bar').addEventListener('click', toggleMenu);
     function toggleMenu() {
+        const header = document.getElementById('header');
         const div_bar = document.getElementById('div_bar');
         const arrow = document.getElementById('arrow');
         const div_menu = document.getElementById('div_menu');
@@ -104,12 +105,13 @@
     
       if (document.documentElement.clientWidth > 414){
         if (div_menu.style.display === 'none') {
-        // Открываем меню
-        div_menu.style.display = 'flex';
-        div_bar.classList.add('active');
-        otherDivs.forEach(div => div.style.width = '30%');
-        div_menu.style.width = '55%';
-        arrow.style.transform = 'rotate(180deg)';
+            // Открываем меню
+            div_menu.style.display = 'flex';
+            div_bar.classList.add('active');
+            otherDivs.forEach(div => div.style.width = '30%');
+            div_menu.style.width = '55%';
+            arrow.style.transform = 'rotate(180deg)';
+            header.style.width = '60%';
         } 
         
         else {
@@ -119,41 +121,11 @@
             otherDivs.forEach(div => div.style.width = '100%');
             div_menu.style.width = '0%';
             arrow.style.transform = 'rotate(0deg)';
+            header.style.width = '20%';
         }
       }
       
     }
-
-    // function adaptiveMenuForMobileJs() {
-    //     const div_bar = document.getElementById('div_bar');
-    //     const arrow = document.getElementById('arrow');
-    //     const div_menu = document.getElementById('div_menu');
-    //     const otherDivs = document.querySelectorAll('#designBlockMainPage, #cultureBlockMainPage, #architectureBlockMainPage, #artsBlockMainPage');
-        
-    //     if (document.documentElement.clientWidth <= 414) {
-    //         if (div_menu.style.display === 'none') {
-    //             // Открываем меню
-    //             div_menu.style.display = 'flex';
-    //             div_bar.classList.add('active');
-    //             otherDivs.forEach(div => div.style.height = '20%');
-    //             div_menu.style.height = '25%';
-    //             arrow.style.transform = 'rotate(-90deg)';
-    //         } 
-            
-    //         else {
-    //             // Закрываем меню
-    //             div_menu.style.display = 'none';
-    //             div_bar.classList.remove('active');
-    //             otherDivs.forEach(div => div.style.height = '25%');
-    //             div_menu.style.height = '0%';
-    //             arrow.style.transform = 'rotate(90deg)';
-    //         }
-    //     }
-    // }
-    // document.getElementById('div_bar').addEventListener('click', adaptiveMenuForMobileJs);
-
-    
-    // // window.innerHeight <= 414
 
     document.getElementById('div_bar_phone').addEventListener('click', toggleList);
 

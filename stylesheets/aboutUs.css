@@ -25,7 +25,7 @@
     font-weight: 500;
 }
 
-.header{
+#header{
     height: 100%; 
     background-color: rgba(170, 151, 74, 1); 
     display: flex; 
@@ -67,7 +67,7 @@
     margin-top: 0.5rem;
 }
 
-.header{
+#header{
     ul{
         padding-left: 1rem;
     }
